@@ -1,0 +1,14 @@
+{
+    "Task1":{
+        "description": "template",
+        "recognition":"OCR/templatematch/runexe/None",
+        "expected": "string/imgPath/exeName/None",
+        "action": "click/press_key(keyname)/run(exePath)/None",
+        "recog_delay": 0.0,
+        "after_delay": 0.0,
+        "next": "Task2/None"
+    },
+    "Task2":{
+        ...
+    }
+}

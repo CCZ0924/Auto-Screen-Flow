@@ -1,0 +1,53 @@
+{
+    "Run_BetterGI":{
+        "description": "启动BetterGI",
+        "recognition":"runexe",
+        "expected": "BetterGI.exe",
+        "action": "run(C:\\Program Files\\BetterGI\\BetterGI.exe)",
+        "after_delay": 5.0,
+        "next": "TemplateMatch_ClickOneDragon"
+    },
+    "TemplateMatch_ClickOneDragon":{
+        "description": "图像识别并点击一条龙",
+        "recognition":"templatematch",
+        "expected": "picture/BetterGI/OneDragon.png",
+        "action": "click",
+        "after_delay": 3.0,
+        "next": "TemplateMatch_ClickStartButton"
+    },
+    "TemplateMatch_ClickStartButton":{
+        "description": "图像识别并点击开始按钮",
+        "recognition":"templatematch",
+        "expected": "picture/BetterGI/StartButton.png",
+        "action": "click",
+        "after_delay": 3.0,
+        "next": "Run_NTEGame"
+    },
+
+
+    "Run_NTEGame":{
+        "description": "启动NTEGame",
+        "recognition":"runexe",
+        "expected": "NTEGame.exe",
+        "action": "run(C:\\Program Files\\Neverness To Everness\\NTELauncher.exe)",
+        "after_delay": 8.0,
+        "next": "TemplateMatch_ClickStartGame"
+    },
+    "TemplateMatch_ClickStartGame":{
+        "description": "图像识别并点击开始游戏",
+        "recognition":"templatematch",
+        "expected": "Picture\\NTEGame\\StartGame.png",
+        "action": "click",
+        "after_delay": 15.0,
+        "next": "TemplateMatch_ClickEnterGame"
+    },
+    "TemplateMatch_ClickEnterGame":{
+        "description": "图像识别并点击进入游戏",
+        "recognition":"templatematch",
+        "expected": "Picture\\NTEGame\\EnterGame.png",
+        "action": "click",
+        "after_delay": 20.0,
+        "action_repeat": 2,
+        "next": "None"
+    }
+}
